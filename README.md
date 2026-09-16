@@ -12,6 +12,11 @@ with its source, the gaps are written down, and the result can be rebuilt by som
 
 ### People analytics & HR
 
+- **[pay-transparency-readiness-kit](https://github.com/D0M3N1C0X/pay-transparency-readiness-kit)** —
+  the EU Pay Transparency Directive run end to end for an employer in four countries, delivered
+  as a consulting team would: a live Excel model reconciled with pandas on 460 checks, a board
+  briefing, a readiness checklist and a register of every legal source.
+  [Read the report →](https://d0m3n1c0x.github.io/pay-transparency-readiness-kit/)
 - **[hr-people-analytics](https://github.com/D0M3N1C0X/hr-people-analytics)** — why people
   leave, whether pay is defensible under the EU Pay Transparency Directive, and whether the HR
   service desk works, on a synthetic 4,000-employee organisation. Logistic regression, pay-gap
@@ -39,9 +44,9 @@ with its source, the gaps are written down, and the result can be rebuilt by som
 
 ### Toolbox
 
-- **Analysis** — Python, SQL, R, Stata, Excel
+- **Analysis** — Python (pandas), SQL, R, Stata, Excel modelling
 - **Building** — JavaScript, HTML/CSS, GitHub Actions: dashboards and tools that run without a server
-- **HR** — Italian and EU employment law, Directive (EU) 2023/970, GDPR, employee relations
+- **HR** — Italian and EU employment law, Directive (EU) 2023/970, gender-neutral job evaluation, GDPR, employee relations
 - **Education** — learning design, media literacy, evaluation of educational programmes
 
 ### Background
