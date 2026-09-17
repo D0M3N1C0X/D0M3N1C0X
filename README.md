@@ -21,6 +21,11 @@ with its source, the gaps are written down, and the result can be rebuilt by som
   analysed in R and Quarto: split by sector, the gender pay gap inside sectors is wider than
   the published one in 22 countries, and wider still in the large employers that report first.
   [Read the article →](https://d0m3n1c0x.github.io/where-pay-transparency-bites/) · [dashboard](https://d0m3n1c0x.github.io/where-pay-transparency-bites/dashboard/) · [working paper](https://d0m3n1c0x.github.io/where-pay-transparency-bites/paper.pdf)
+- **[workforce-cost-model](https://github.com/D0M3N1C0X/workforce-cost-model)** — the people
+  budget of the hr-people-analytics organisation, built as HR and finance would build it:
+  Italian and Polish employer costs for 2026, a budget variance that adds up exactly, and next
+  year under four scenarios, in a live Excel model reconciled with pandas on 570 checks.
+  [Read the memo →](https://d0m3n1c0x.github.io/workforce-cost-model/)
 - **[hr-people-analytics](https://github.com/D0M3N1C0X/hr-people-analytics)** — why people
   leave, whether pay is defensible under the EU Pay Transparency Directive, and whether the HR
   service desk works, on a synthetic 4,000-employee organisation. Logistic regression, pay-gap
@@ -48,7 +53,7 @@ with its source, the gaps are written down, and the result can be rebuilt by som
 
 ### Toolbox
 
-- **Analysis** — Python (pandas), R (tidyverse, ggplot2), SQL, Stata, Excel modelling
+- **Analysis** — Python (pandas), R (tidyverse, ggplot2), SQL, Stata, Excel modelling (driver-based forecasts, variance analysis)
 - **Building** — JavaScript, HTML/CSS, Quarto, GitHub Actions: reports, dashboards and tools that run without a server
 - **HR** — Italian and EU employment law, Directive (EU) 2023/970, gender-neutral job evaluation, GDPR, employee relations
 - **Education** — learning design, media literacy, evaluation of educational programmes
