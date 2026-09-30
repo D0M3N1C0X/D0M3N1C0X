@@ -58,6 +58,11 @@ with its source, the gaps are written down, and the result can be rebuilt by som
 - **HR** — Italian and EU employment law, Directive (EU) 2023/970, gender-neutral job evaluation, GDPR, employee relations
 - **Education** — learning design, media literacy, evaluation of educational programmes
 
+**How I work.** I build with an AI coding assistant, and the commit history says so. What I
+own is the question, the method and the check: every figure is computed twice or traced to
+its source, and each repository keeps a register of what was verified, what wasn't, and what
+was corrected.
+
 ### Background
 
 - MSc Politics, Administration & Organisation — University of Bologna
