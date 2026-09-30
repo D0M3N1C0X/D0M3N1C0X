@@ -26,6 +26,11 @@ with its source, the gaps are written down, and the result can be rebuilt by som
   Italian and Polish employer costs for 2026, a budget variance that adds up exactly, and next
   year under four scenarios, in a live Excel model reconciled with pandas on 570 checks.
   [Read the memo →](https://d0m3n1c0x.github.io/workforce-cost-model/)
+- **[equal-value-pay-ranges](https://github.com/D0M3N1C0X/equal-value-pay-ranges)** — the reward side of
+  the Directive: family-based pay bands redesigned as one range per grade and country, priced on
+  Eurostat market data for four countries, every employee placed against it and the range to
+  publish for every vacancy. [Read the report →](https://d0m3n1c0x.github.io/equal-value-pay-ranges/) ·
+  [pay range finder](https://d0m3n1c0x.github.io/equal-value-pay-ranges/ads.html)
 - **[hr-people-analytics](https://github.com/D0M3N1C0X/hr-people-analytics)** — why people
   leave, whether pay is defensible under the EU Pay Transparency Directive, and whether the HR
   service desk works, on a synthetic 4,000-employee organisation. Logistic regression, pay-gap
