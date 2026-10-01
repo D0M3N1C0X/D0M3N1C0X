@@ -12,6 +12,7 @@ with its source, the gaps are written down, and the result can be rebuilt by som
 
 ### People analytics & HR
 
+- **[workforce-transition-planner](https://github.com/D0M3N1C0X/workforce-transition-planner)** — a workforce-planning dashboard for Italy and Poland, built with synthetic data to explore internal moves across three demand scenarios.
 - **[pay-transparency-readiness-kit](https://github.com/D0M3N1C0X/pay-transparency-readiness-kit)** —
   the EU Pay Transparency Directive run end to end for an employer in four countries, delivered
   as a consulting team would: a live Excel model reconciled with pandas on 460 checks, a board
