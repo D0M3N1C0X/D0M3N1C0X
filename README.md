@@ -42,6 +42,11 @@ with its source, the gaps are written down, and the result can be rebuilt by som
 
 ### HR tech & automation
 
+- **[controlli-cedolini](https://github.com/D0M3N1C0X/controlli-cedolini)** — nine pre-release
+  checks on Italian payslips (CCNL Terziario): minimums, seniority steps, INPS, TFR, holidays, F24
+  reconciliation, plus the cost of the November 2026 pay increase per client. Python and a
+  live-formula sheet for Google Sheets, reconciled on 417 values; in Italian.
+  [Read the report →](https://d0m3n1c0x.github.io/controlli-cedolini/)
 - **[job-search-agent](https://github.com/D0M3N1C0X/job-search-agent)** — a job search run as a
   data pipeline: public ATS board APIs, deterministic and explainable fit scoring, tailored
   documents, funnel analytics. Built for my own search, set up so HR colleagues can run it too.
