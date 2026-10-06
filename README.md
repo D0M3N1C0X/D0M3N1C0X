@@ -40,6 +40,14 @@ with its source, the gaps are written down, and the result can be rebuilt by som
   intervals, key-driver analysis, free-text themes, and a dashboard that refuses to report on
   fewer than five people. [Open the dashboard →](https://d0m3n1c0x.github.io/engagement-survey-analytics/)
 
+### Business & product analysis
+
+- **[vimeo-growth-case](https://github.com/D0M3N1C0X/vimeo-growth-case)** — an outside-in analysis of
+  Vimeo from its SEC filings: revenue split into volume and price by category, three growth bets sized,
+  a business case for routing Self-Serve teams to Enterprise, and the A/B test that would decide it,
+  with sample sizes and a decision rule measured on simulated tests.
+  [Read the memo →](https://d0m3n1c0x.github.io/vimeo-growth-case/)
+
 ### HR tech & automation
 
 - **[controlli-cedolini](https://github.com/D0M3N1C0X/controlli-cedolini)** — nine pre-release
