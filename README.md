@@ -46,15 +46,16 @@ with its source, the gaps are written down, and the result can be rebuilt by som
   Vimeo from its SEC filings: revenue split into volume and price by category, three growth bets sized,
   a business case for routing Self-Serve teams to Enterprise, and the A/B test that would decide it,
   with sample sizes and a decision rule measured on simulated tests.
-  [Read the memo →](https://d0m3n1c0x.github.io/vimeo-growth-case/)
+  [Read the memo →](https://d0m3n1c0x.github.io/vimeo-growth-case/) · [interactive model](https://d0m3n1c0x.github.io/vimeo-growth-case/model/)
 
 ### HR tech & automation
 
-- **[controlli-cedolini](https://github.com/D0M3N1C0X/controlli-cedolini)** — nine pre-release
+- **[controlli-cedolini](https://github.com/D0M3N1C0X/controlli-cedolini)** — ten pre-release
   checks on Italian payslips (CCNL Terziario): minimums, seniority steps, INPS, TFR, holidays, F24
-  reconciliation, plus the cost of the November 2026 pay increase per client. Python and a
-  live-formula sheet for Google Sheets, reconciled on 417 values; in Italian.
-  [Read the report →](https://d0m3n1c0x.github.io/controlli-cedolini/)
+  reconciliation, undeclared master-data changes, plus the cost of the November 2026 pay increase per
+  client. Python, a live-formula sheet and a browser tool where files stay local, all giving the same
+  results; in Italian. [Try the tool →](https://d0m3n1c0x.github.io/controlli-cedolini/strumento/) ·
+  [report](https://d0m3n1c0x.github.io/controlli-cedolini/)
 - **[job-search-agent](https://github.com/D0M3N1C0X/job-search-agent)** — a job search run as a
   data pipeline: public ATS board APIs, deterministic and explainable fit scoring, tailored
   documents, funnel analytics. Built for my own search, set up so HR colleagues can run it too.
