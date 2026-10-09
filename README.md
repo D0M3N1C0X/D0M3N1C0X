@@ -2,6 +2,8 @@
 
 **HR advisory · People analytics · Media education** — Italian, based in Kraków, working across Europe
 
+**Two-minute tour:** [d0m3n1c0x.github.io](https://d0m3n1c0x.github.io/) — three projects, each with a live tool or report.
+
 I work where decisions about people meet evidence. My day job is HR advisory for the Italian
 market in a pan-European people operations team: employment questions, company policy applied
 inside Italian law, case work at volume. Around it I build two kinds of things — the analytical
