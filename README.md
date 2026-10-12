@@ -52,9 +52,9 @@ with its source, the gaps are written down, and the result can be rebuilt by som
 
 ### HR tech & automation
 
-- **[controlli-cedolini](https://github.com/D0M3N1C0X/controlli-cedolini)** — ten pre-release
+- **[controlli-cedolini](https://github.com/D0M3N1C0X/controlli-cedolini)** — eleven pre-release
   checks on Italian payslips (CCNL Terziario): minimums, seniority steps, INPS, TFR, holidays, F24
-  reconciliation, undeclared master-data changes, plus the cost of the November 2026 pay increase per
+  reconciliation, undeclared master-data changes, 13th and 14th month accruals, plus the cost of the November 2026 pay increase per
   client. Python, a live-formula sheet and a browser tool where files stay local, all giving the same
   results; in Italian. [Try the tool →](https://d0m3n1c0x.github.io/controlli-cedolini/strumento/) ·
   [report](https://d0m3n1c0x.github.io/controlli-cedolini/)
