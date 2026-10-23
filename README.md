@@ -1,4 +1,4 @@
-<a href="https://github.com/D0M3N1C0X/d0m3n1c0x.github.io"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/D0M3N1C0X/d0m3n1c0x.github.io/main/site-assets/cover-dark.png"><img alt="Domenico Perroni: HR advisory, people analytics, reward. 3,134 figures reconciled between Python and Excel, 11 projects to open live." src="https://raw.githubusercontent.com/D0M3N1C0X/d0m3n1c0x.github.io/main/site-assets/cover-light.png" width="100%"></picture></a>
+<a href="https://github.com/D0M3N1C0X/d0m3n1c0x.github.io"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/D0M3N1C0X/d0m3n1c0x.github.io/main/site-assets/cover-dark.png"><img alt="Domenico Perroni: HR advisory, people analytics, reward. 3,185 figures reconciled between Python and Excel, 11 projects to open live." src="https://raw.githubusercontent.com/D0M3N1C0X/d0m3n1c0x.github.io/main/site-assets/cover-light.png" width="100%"></picture></a>
 
 ## Domenico Perroni
 
