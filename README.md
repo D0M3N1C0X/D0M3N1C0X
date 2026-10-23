@@ -26,9 +26,9 @@ with its source, the gaps are written down, and the result can be rebuilt by som
 
 - **[pay-transparency-readiness-kit](https://github.com/D0M3N1C0X/pay-transparency-readiness-kit)** —
   the EU Pay Transparency Directive run end to end for an employer in four countries, delivered
-  as a consulting team would: a live Excel model reconciled with pandas on 460 checks, a board
-  briefing, a readiness checklist and a register of every legal source; plus a browser tool that runs the same
-  assessment on a client's own payroll without the file leaving the computer.
+  as a consulting team would: a live Excel model reconciled with pandas on 511 checks, a board
+  briefing, a readiness checklist and a register of every legal source, with Italy's narrower measure side by side;
+  plus a browser tool that runs the same assessment on a client's own payroll without the file leaving the computer.
   [Read the report →](https://d0m3n1c0x.github.io/pay-transparency-readiness-kit/) · [Try the tool →](https://d0m3n1c0x.github.io/pay-transparency-readiness-kit/tool/)
 - **[where-pay-transparency-bites](https://github.com/D0M3N1C0X/where-pay-transparency-bites)** — Eurostat data for all 27 Member States,
   analysed in R and Quarto: split by sector, the gender pay gap inside sectors is wider than
