@@ -1,3 +1,5 @@
+<a href="https://github.com/D0M3N1C0X/d0m3n1c0x.github.io"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/D0M3N1C0X/d0m3n1c0x.github.io/main/site-assets/cover-dark.png"><img alt="Domenico Perroni: HR advisory, people analytics, reward. 3,134 figures reconciled between Python and Excel, 11 projects to open live." src="https://raw.githubusercontent.com/D0M3N1C0X/d0m3n1c0x.github.io/main/site-assets/cover-light.png" width="100%"></picture></a>
+
 ## Domenico Perroni
 
 **HR advisory · People analytics · Media education** — Italian, based in Kraków, working across Europe
@@ -12,6 +14,14 @@ layer an HR function needs, and learning tools that teach people how to read a s
 The two halves come from two master's degrees, and they share one habit: **a claim travels
 with its source, the gaps are written down, and the result can be rebuilt by someone else.**
 
+### Featured
+
+<table>
+<tr><td width="50%"><a href="https://github.com/D0M3N1C0X/pay-transparency-readiness-kit"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/D0M3N1C0X/pay-transparency-readiness-kit/main/site-assets/cover-dark.png"><img alt="EU Pay Transparency Directive readiness kit" src="https://raw.githubusercontent.com/D0M3N1C0X/pay-transparency-readiness-kit/main/site-assets/cover-light.png" width="100%"></picture></a></td><td width="50%"><a href="https://github.com/D0M3N1C0X/controlli-cedolini"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/D0M3N1C0X/controlli-cedolini/main/site-assets/cover-dark.png"><img alt="Payroll checks before the payslips go out" src="https://raw.githubusercontent.com/D0M3N1C0X/controlli-cedolini/main/site-assets/cover-light.png" width="100%"></picture></a></td></tr>
+<tr><td width="50%"><a href="https://github.com/D0M3N1C0X/workforce-cost-model"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/D0M3N1C0X/workforce-cost-model/main/site-assets/cover-dark.png"><img alt="Workforce cost model and scenario simulator" src="https://raw.githubusercontent.com/D0M3N1C0X/workforce-cost-model/main/site-assets/cover-light.png" width="100%"></picture></a></td><td width="50%"><a href="https://github.com/D0M3N1C0X/equal-value-pay-ranges"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/D0M3N1C0X/equal-value-pay-ranges/main/site-assets/cover-dark.png"><img alt="Equal-value pay ranges" src="https://raw.githubusercontent.com/D0M3N1C0X/equal-value-pay-ranges/main/site-assets/cover-light.png" width="100%"></picture></a></td></tr>
+<tr><td width="50%"><a href="https://github.com/D0M3N1C0X/vimeo-growth-case"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/D0M3N1C0X/vimeo-growth-case/main/site-assets/cover-dark.png"><img alt="Vimeo growth case from SEC filings" src="https://raw.githubusercontent.com/D0M3N1C0X/vimeo-growth-case/main/site-assets/cover-light.png" width="100%"></picture></a></td><td width="50%"><a href="https://github.com/D0M3N1C0X/excel-twin"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/D0M3N1C0X/excel-twin/main/site-assets/cover-dark.png"><img alt="excel-twin, the reconciliation library" src="https://raw.githubusercontent.com/D0M3N1C0X/excel-twin/main/site-assets/cover-light.png" width="100%"></picture></a></td></tr>
+</table>
+
 ### People analytics & HR
 
 - **[pay-transparency-readiness-kit](https://github.com/D0M3N1C0X/pay-transparency-readiness-kit)** —
@@ -22,7 +32,7 @@ with its source, the gaps are written down, and the result can be rebuilt by som
   [Read the report →](https://d0m3n1c0x.github.io/pay-transparency-readiness-kit/) · [Try the tool →](https://d0m3n1c0x.github.io/pay-transparency-readiness-kit/tool/)
 - **[where-pay-transparency-bites](https://github.com/D0M3N1C0X/where-pay-transparency-bites)** — Eurostat data for all 27 Member States,
   analysed in R and Quarto: split by sector, the gender pay gap inside sectors is wider than
-  the published one in 22 countries, and wider still in the large employers that report first.
+  the published one in 22 countries, and wider still in the large employers that report every year.
   [Read the article →](https://d0m3n1c0x.github.io/where-pay-transparency-bites/) · [dashboard](https://d0m3n1c0x.github.io/where-pay-transparency-bites/dashboard/) · [working paper](https://d0m3n1c0x.github.io/where-pay-transparency-bites/paper.pdf)
 - **[workforce-cost-model](https://github.com/D0M3N1C0X/workforce-cost-model)** — the people
   budget of the hr-people-analytics organisation, built as HR and finance would build it:
@@ -58,7 +68,7 @@ with its source, the gaps are written down, and the result can be rebuilt by som
   checks on Italian payslips (CCNL Terziario): minimums, seniority steps, INPS, TFR, holidays, F24
   reconciliation, undeclared master-data changes, 13th and 14th month pay, terminations (untaken holiday, notice), plus the cost of the November 2026 pay increase per
   client. Python, a live-formula sheet and a browser tool where files stay local, all giving the same
-  results; in Italian. [Try the tool →](https://d0m3n1c0x.github.io/controlli-cedolini/strumento/) ·
+  results; the tool in English and Italian. [Try the tool →](https://d0m3n1c0x.github.io/controlli-cedolini/strumento/) ·
   [report](https://d0m3n1c0x.github.io/controlli-cedolini/)
 - **[job-search-agent](https://github.com/D0M3N1C0X/job-search-agent)** — a job search run as a
   data pipeline: public ATS board APIs, deterministic and explainable fit scoring, tailored
@@ -70,9 +80,10 @@ with its source, the gaps are written down, and the result can be rebuilt by som
   Herculaneum from AD 79 to today as a model you walk through, in six languages. Its
   documentary dossier puts a source next to every statement and keeps a register of what is
   still unverified. [Open the model →](https://d0m3n1c0x.github.io/pompei-stratificata/)
-- **Florence, 1216** *(in development)* — a serious game for middle and secondary schools: the
-  class writes the chronicle of the Buondelmonte murder as a young notary, then compares its
-  version with the chronicles that actually survive.
+- **[Florence, 1216](https://github.com/D0M3N1C0X/firenze-1216-citta)** — Florence on Easter morning 1216, to walk
+  through: the setting of a serious game for middle and secondary schools, in development, where the class writes the
+  chronicle of the Buondelmonte murder as a young notary and compares it with the chronicles that survive.
+  [Walk the city →](https://d0m3n1c0x.github.io/firenze-1216-citta/)
 
 ### Toolbox
 
