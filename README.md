@@ -27,8 +27,9 @@ with its source, the gaps are written down, and the result can be rebuilt by som
 - **[workforce-cost-model](https://github.com/D0M3N1C0X/workforce-cost-model)** — the people
   budget of the hr-people-analytics organisation, built as HR and finance would build it:
   Italian and Polish employer costs for 2026, a budget variance that adds up exactly, and next
-  year under four scenarios, in a live Excel model reconciled with pandas on 570 checks.
-  [Read the memo →](https://d0m3n1c0x.github.io/workforce-cost-model/)
+  year under four scenarios, in a live Excel model reconciled with pandas on 570 checks; plus a
+  browser simulator for your own scenarios and staff, and what one employee costs in four countries.
+  [Read the memo →](https://d0m3n1c0x.github.io/workforce-cost-model/) · [Try the simulator →](https://d0m3n1c0x.github.io/workforce-cost-model/simulator/)
 - **[equal-value-pay-ranges](https://github.com/D0M3N1C0X/equal-value-pay-ranges)** — the reward side of
   the Directive: family-based pay bands redesigned as one range per grade and country, priced on
   Eurostat market data for four countries, every employee placed against it and the range to
