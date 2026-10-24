@@ -1,4 +1,4 @@
-<a href="https://github.com/D0M3N1C0X/d0m3n1c0x.github.io"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/D0M3N1C0X/d0m3n1c0x.github.io/main/site-assets/cover-dark.png"><img alt="Domenico Perroni: HR advisory, people analytics, reward. 3,185 figures reconciled between Python and Excel, 11 projects to open live." src="https://raw.githubusercontent.com/D0M3N1C0X/d0m3n1c0x.github.io/main/site-assets/cover-light.png" width="100%"></picture></a>
+<a href="https://github.com/D0M3N1C0X/d0m3n1c0x.github.io"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/D0M3N1C0X/d0m3n1c0x.github.io/main/site-assets/cover-dark.png"><img alt="Domenico Perroni: HR advisory, people analytics, reward. 3,502 figures reconciled between Python and Excel, 12 projects to open live." src="https://raw.githubusercontent.com/D0M3N1C0X/d0m3n1c0x.github.io/main/site-assets/cover-light.png" width="100%"></picture></a>
 
 ## Domenico Perroni
 
@@ -40,6 +40,10 @@ with its source, the gaps are written down, and the result can be rebuilt by som
   year under four scenarios, in a live Excel model reconciled with pandas on 570 checks; plus a
   browser simulator for your own scenarios and staff, and what one employee costs in four countries.
   [Read the memo →](https://d0m3n1c0x.github.io/workforce-cost-model/) · [Try the simulator →](https://d0m3n1c0x.github.io/workforce-cost-model/simulator/)
+- **[ai-act-hr-readiness-kit](https://github.com/D0M3N1C0X/ai-act-hr-readiness-kit)** — the EU AI Act for the same
+  employer's HR function: twelve AI systems classified, one to stop now and seven high-risk from December 2027, the
+  obligations each one triggers, and whom to tell under labour law in Italy, Germany, Spain and Poland, in a live Excel
+  register reconciled with Python. [Read the report →](https://d0m3n1c0x.github.io/ai-act-hr-readiness-kit/)
 - **[equal-value-pay-ranges](https://github.com/D0M3N1C0X/equal-value-pay-ranges)** — the reward side of
   the Directive: family-based pay bands redesigned as one range per grade and country, priced on
   Eurostat market data for four countries, every employee placed against it and the range to
