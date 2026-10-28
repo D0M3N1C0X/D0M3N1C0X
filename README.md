@@ -2,98 +2,71 @@
 
 ## Domenico Perroni
 
-**HR advisory · People analytics · Media education** — Italian, based in Kraków, working across Europe
+**HR advisor who builds the analysis HR runs on** — reward, EU pay transparency, the AI Act at work, people analytics.
+Italian, based in Kraków. Open to conversations about HR advisory and reward roles in Europe, relocation included.
 
-**Two-minute tour:** [d0m3n1c0x.github.io](https://d0m3n1c0x.github.io/) — three projects, each with a live tool or report.
+**[Message me on LinkedIn →](https://www.linkedin.com/in/domenico-perroni)** · [Portfolio in 90 seconds](https://d0m3n1c0x.github.io/) · [One-page case studies](https://d0m3n1c0x.github.io/cases/)
 
-I work where decisions about people meet evidence. My day job is HR advisory for the Italian
-market in a pan-European people operations team: employment questions, company policy applied
-inside Italian law, case work at volume. Around it I build two kinds of things — the analytical
-layer an HR function needs, and learning tools that teach people how to read a source.
+### In 30 seconds
 
-The two halves come from two master's degrees, and they share one habit: **a claim travels
-with its source, the gaps are written down, and the result can be rebuilt by someone else.**
+- **The EU Pay Transparency Directive, end to end** for an employer in four countries: a 17.6% hourly gap, 12 of 28
+  categories to justify or remedy, at most €1.9M a year to close them. A live Excel model reconciled with Python on
+  511 checks, and a browser tool that runs the assessment on a client's own payroll.
+  [Report](https://d0m3n1c0x.github.io/pay-transparency-readiness-kit/) · [Tool](https://d0m3n1c0x.github.io/pay-transparency-readiness-kit/tool/)
+- **The AI Act for an HR function**: twelve AI systems classified, one to stop now, seven high-risk with duties from
+  2 December 2027, and whom to tell under labour law in four countries.
+  [Tool](https://d0m3n1c0x.github.io/ai-act-hr-readiness-kit/tool/) · [Report](https://d0m3n1c0x.github.io/ai-act-hr-readiness-kit/)
+- **Fourteen pre-release checks on Italian payslips** (CCNL Terziario): 35 of 35 planted errors found, no false
+  alarms, in a browser tool where payroll files never leave the computer.
+  [Tool](https://d0m3n1c0x.github.io/controlli-cedolini/strumento/) · [Report](https://d0m3n1c0x.github.io/controlli-cedolini/)
 
-### Featured
+Day job: HR advisory for the Italian market in Amazon's pan-European HR services, 150–180 employee cases a week with a
+95% satisfaction rating.
 
 <table>
-<tr><td width="50%"><a href="https://github.com/D0M3N1C0X/pay-transparency-readiness-kit"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/D0M3N1C0X/pay-transparency-readiness-kit/main/site-assets/cover-dark.png"><img alt="EU Pay Transparency Directive readiness kit" src="https://raw.githubusercontent.com/D0M3N1C0X/pay-transparency-readiness-kit/main/site-assets/cover-light.png" width="100%"></picture></a></td><td width="50%"><a href="https://github.com/D0M3N1C0X/controlli-cedolini"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/D0M3N1C0X/controlli-cedolini/main/site-assets/cover-dark.png"><img alt="Payroll checks before the payslips go out" src="https://raw.githubusercontent.com/D0M3N1C0X/controlli-cedolini/main/site-assets/cover-light.png" width="100%"></picture></a></td></tr>
-<tr><td width="50%"><a href="https://github.com/D0M3N1C0X/workforce-cost-model"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/D0M3N1C0X/workforce-cost-model/main/site-assets/cover-dark.png"><img alt="Workforce cost model and scenario simulator" src="https://raw.githubusercontent.com/D0M3N1C0X/workforce-cost-model/main/site-assets/cover-light.png" width="100%"></picture></a></td><td width="50%"><a href="https://github.com/D0M3N1C0X/equal-value-pay-ranges"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/D0M3N1C0X/equal-value-pay-ranges/main/site-assets/cover-dark.png"><img alt="Equal-value pay ranges" src="https://raw.githubusercontent.com/D0M3N1C0X/equal-value-pay-ranges/main/site-assets/cover-light.png" width="100%"></picture></a></td></tr>
-<tr><td width="50%"><a href="https://github.com/D0M3N1C0X/vimeo-growth-case"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/D0M3N1C0X/vimeo-growth-case/main/site-assets/cover-dark.png"><img alt="Vimeo growth case from SEC filings" src="https://raw.githubusercontent.com/D0M3N1C0X/vimeo-growth-case/main/site-assets/cover-light.png" width="100%"></picture></a></td><td width="50%"><a href="https://github.com/D0M3N1C0X/excel-twin"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/D0M3N1C0X/excel-twin/main/site-assets/cover-dark.png"><img alt="excel-twin, the reconciliation library" src="https://raw.githubusercontent.com/D0M3N1C0X/excel-twin/main/site-assets/cover-light.png" width="100%"></picture></a></td></tr>
+<tr><td width="50%"><a href="https://github.com/D0M3N1C0X/pay-transparency-readiness-kit"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/D0M3N1C0X/pay-transparency-readiness-kit/main/site-assets/cover-dark.png"><img alt="EU Pay Transparency Directive readiness kit" src="https://raw.githubusercontent.com/D0M3N1C0X/pay-transparency-readiness-kit/main/site-assets/cover-light.png" width="100%"></picture></a></td><td width="50%"><a href="https://github.com/D0M3N1C0X/ai-act-hr-readiness-kit"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/D0M3N1C0X/ai-act-hr-readiness-kit/main/site-assets/cover-dark.png"><img alt="AI Act readiness for HR" src="https://raw.githubusercontent.com/D0M3N1C0X/ai-act-hr-readiness-kit/main/site-assets/cover-light.png" width="100%"></picture></a></td></tr>
+<tr><td width="50%"><a href="https://github.com/D0M3N1C0X/equal-value-pay-ranges"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/D0M3N1C0X/equal-value-pay-ranges/main/site-assets/cover-dark.png"><img alt="Equal-value pay ranges" src="https://raw.githubusercontent.com/D0M3N1C0X/equal-value-pay-ranges/main/site-assets/cover-light.png" width="100%"></picture></a></td><td width="50%"><a href="https://github.com/D0M3N1C0X/controlli-cedolini"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/D0M3N1C0X/controlli-cedolini/main/site-assets/cover-dark.png"><img alt="Payroll checks before the payslips go out" src="https://raw.githubusercontent.com/D0M3N1C0X/controlli-cedolini/main/site-assets/cover-light.png" width="100%"></picture></a></td></tr>
+<tr><td width="50%"><a href="https://github.com/D0M3N1C0X/workforce-cost-model"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/D0M3N1C0X/workforce-cost-model/main/site-assets/cover-dark.png"><img alt="Workforce cost model and scenario simulator" src="https://raw.githubusercontent.com/D0M3N1C0X/workforce-cost-model/main/site-assets/cover-light.png" width="100%"></picture></a></td><td width="50%"><a href="https://github.com/D0M3N1C0X/where-pay-transparency-bites"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/D0M3N1C0X/where-pay-transparency-bites/main/site-assets/cover-dark.png"><img alt="Where pay transparency bites: Eurostat working paper" src="https://raw.githubusercontent.com/D0M3N1C0X/where-pay-transparency-bites/main/site-assets/cover-light.png" width="100%"></picture></a></td></tr>
 </table>
 
-### People analytics & HR
+### All projects
 
-- **[pay-transparency-readiness-kit](https://github.com/D0M3N1C0X/pay-transparency-readiness-kit)** —
-  the EU Pay Transparency Directive run end to end for an employer in four countries, delivered
-  as a consulting team would: a live Excel model reconciled with pandas on 511 checks, a board
-  briefing, a readiness checklist and a register of every legal source, with Italy's narrower measure side by side;
-  plus a browser tool that runs the same assessment on a client's own payroll without the file leaving the computer.
-  [Read the report →](https://d0m3n1c0x.github.io/pay-transparency-readiness-kit/) · [Try the tool →](https://d0m3n1c0x.github.io/pay-transparency-readiness-kit/tool/)
-- **[where-pay-transparency-bites](https://github.com/D0M3N1C0X/where-pay-transparency-bites)** — Eurostat data for all 27 Member States,
-  analysed in R and Quarto: split by sector, the gender pay gap inside sectors is wider than
-  the published one in 22 countries, and wider still in the large employers that report every year.
-  [Read the article →](https://d0m3n1c0x.github.io/where-pay-transparency-bites/) · [dashboard](https://d0m3n1c0x.github.io/where-pay-transparency-bites/dashboard/) · [working paper](https://d0m3n1c0x.github.io/where-pay-transparency-bites/paper.pdf)
-- **[workforce-cost-model](https://github.com/D0M3N1C0X/workforce-cost-model)** — the people
-  budget of the hr-people-analytics organisation, built as HR and finance would build it:
-  Italian and Polish employer costs for 2026, a budget variance that adds up exactly, and next
-  year under four scenarios, in a live Excel model reconciled with pandas on 570 checks; plus a
-  browser simulator for your own scenarios and staff, and what one employee costs in four countries.
-  [Read the memo →](https://d0m3n1c0x.github.io/workforce-cost-model/) · [Try the simulator →](https://d0m3n1c0x.github.io/workforce-cost-model/simulator/)
-- **[ai-act-hr-readiness-kit](https://github.com/D0M3N1C0X/ai-act-hr-readiness-kit)** — the EU AI Act for the same
-  employer's HR function: twelve AI systems classified, one to stop now and seven high-risk, the obligations each one
-  triggers and when (Article 111(2) included), and whom to tell under labour law in Italy, Germany, Spain and Poland, in a live Excel
-  register reconciled with Python. [Try the tool →](https://d0m3n1c0x.github.io/ai-act-hr-readiness-kit/tool/) · [report](https://d0m3n1c0x.github.io/ai-act-hr-readiness-kit/)
-- **[equal-value-pay-ranges](https://github.com/D0M3N1C0X/equal-value-pay-ranges)** — the reward side of
-  the Directive: family-based pay bands redesigned as one range per grade and country, priced on
-  Eurostat market data for four countries, every employee placed against it and the range to
-  publish for every vacancy. [Read the report →](https://d0m3n1c0x.github.io/equal-value-pay-ranges/) ·
-  [pay range finder](https://d0m3n1c0x.github.io/equal-value-pay-ranges/ads.html)
-- **[hr-people-analytics](https://github.com/D0M3N1C0X/hr-people-analytics)** — why people
-  leave, whether pay is defensible under the EU Pay Transparency Directive, and whether the HR
-  service desk works, on a synthetic 4,000-employee organisation. Logistic regression, pay-gap
-  decomposition, SQL. [Read the report →](https://d0m3n1c0x.github.io/hr-people-analytics/)
-- **[engagement-survey-analytics](https://github.com/D0M3N1C0X/engagement-survey-analytics)** —
-  an engagement survey from 2,753 answers to an action plan: non-response bias, confidence
-  intervals, key-driver analysis, free-text themes, and a dashboard that refuses to report on
-  fewer than five people. [Open the dashboard →](https://d0m3n1c0x.github.io/engagement-survey-analytics/)
+**Reward, pay transparency and people analytics**
 
-### Business & product analysis
+- [pay-transparency-readiness-kit](https://github.com/D0M3N1C0X/pay-transparency-readiness-kit) — the EU Pay Transparency Directive for a four-country employer, with Italy's narrower measure · [report](https://d0m3n1c0x.github.io/pay-transparency-readiness-kit/) · [tool](https://d0m3n1c0x.github.io/pay-transparency-readiness-kit/tool/)
+- [equal-value-pay-ranges](https://github.com/D0M3N1C0X/equal-value-pay-ranges) — one pay range per grade and country, priced on Eurostat data, and the range to publish for every vacancy · [report](https://d0m3n1c0x.github.io/equal-value-pay-ranges/) · [pay range finder](https://d0m3n1c0x.github.io/equal-value-pay-ranges/ads.html)
+- [ai-act-hr-readiness-kit](https://github.com/D0M3N1C0X/ai-act-hr-readiness-kit) — HR's AI systems under the AI Act: what each owes, from when, and whom to tell · [tool](https://d0m3n1c0x.github.io/ai-act-hr-readiness-kit/tool/) · [report](https://d0m3n1c0x.github.io/ai-act-hr-readiness-kit/)
+- [where-pay-transparency-bites](https://github.com/D0M3N1C0X/where-pay-transparency-bites) — the gender pay gap inside sectors for all 27 Member States, in R and Quarto · [article](https://d0m3n1c0x.github.io/where-pay-transparency-bites/) · [dashboard](https://d0m3n1c0x.github.io/where-pay-transparency-bites/dashboard/) · [working paper, DOI](https://doi.org/10.5281/zenodo.23645870)
+- [workforce-cost-model](https://github.com/D0M3N1C0X/workforce-cost-model) — Italian and Polish people costs, a budget variance and four scenarios for next year · [memo](https://d0m3n1c0x.github.io/workforce-cost-model/) · [simulator](https://d0m3n1c0x.github.io/workforce-cost-model/simulator/)
+- [hr-people-analytics](https://github.com/D0M3N1C0X/hr-people-analytics) — why people leave, whether pay is defensible, whether the HR service desk works · [report](https://d0m3n1c0x.github.io/hr-people-analytics/)
+- [engagement-survey-analytics](https://github.com/D0M3N1C0X/engagement-survey-analytics) — an engagement survey from 2,753 answers to an action plan · [dashboard](https://d0m3n1c0x.github.io/engagement-survey-analytics/)
 
-- **[vimeo-growth-case](https://github.com/D0M3N1C0X/vimeo-growth-case)** — an outside-in analysis of
-  Vimeo from its SEC filings: revenue split into volume and price by category, three growth bets sized,
-  a business case for routing Self-Serve teams to Enterprise, and the A/B test that would decide it,
-  with sample sizes and a decision rule measured on simulated tests.
-  [Read the memo →](https://d0m3n1c0x.github.io/vimeo-growth-case/) · [interactive model](https://d0m3n1c0x.github.io/vimeo-growth-case/model/)
+**Business analysis**
 
-### HR tech & automation
+- [vimeo-growth-case](https://github.com/D0M3N1C0X/vimeo-growth-case) — Vimeo from its SEC filings: where growth comes from, a business case and the A/B test to decide it · [memo](https://d0m3n1c0x.github.io/vimeo-growth-case/) · [interactive model](https://d0m3n1c0x.github.io/vimeo-growth-case/model/)
 
-- **[controlli-cedolini](https://github.com/D0M3N1C0X/controlli-cedolini)** — fourteen pre-release
-  checks on Italian payslips (CCNL Terziario): minimums, seniority steps, INPS, TFR, holidays, F24
-  reconciliation, undeclared master-data changes, 13th and 14th month pay, terminations (untaken holiday, notice), plus the cost of the November 2026 pay increase per
-  client. Python, a live-formula sheet and a browser tool where files stay local, all giving the same
-  results; the tool in English and Italian. [Try the tool →](https://d0m3n1c0x.github.io/controlli-cedolini/strumento/) ·
-  [report](https://d0m3n1c0x.github.io/controlli-cedolini/)
-- **[job-search-agent](https://github.com/D0M3N1C0X/job-search-agent)** — a job search run as a
-  data pipeline: public ATS board APIs, deterministic and explainable fit scoring, tailored
-  documents, funnel analytics. Built for my own search, set up so HR colleagues can run it too.
+**HR operations and tools**
 
-### Media education & public history
+- [controlli-cedolini](https://github.com/D0M3N1C0X/controlli-cedolini) — fourteen pre-release checks on Italian payslips, terminations included · [tool](https://d0m3n1c0x.github.io/controlli-cedolini/strumento/) · [report](https://d0m3n1c0x.github.io/controlli-cedolini/)
+- [excel-twin](https://github.com/D0M3N1C0X/excel-twin) — the small Python library that proves a spreadsheet's formulas reproduce a Python model
+- [job-search-agent](https://github.com/D0M3N1C0X/job-search-agent) — a job search run as a data pipeline, with explainable fit scoring
 
-- **[pompei-stratificata](https://github.com/D0M3N1C0X/pompei-stratificata)** — Pompeii and
-  Herculaneum from AD 79 to today as a model you walk through, in six languages. Its
-  documentary dossier puts a source next to every statement and keeps a register of what is
-  still unverified. [Open the model →](https://d0m3n1c0x.github.io/pompei-stratificata/)
-- **[Florence, 1216](https://github.com/D0M3N1C0X/firenze-1216-citta)** — Florence on Easter morning 1216, to walk
-  through: the setting of a serious game for middle and secondary schools, in development, where the class writes the
-  chronicle of the Buondelmonte murder as a young notary and compares it with the chronicles that survive.
-  [Walk the city →](https://d0m3n1c0x.github.io/firenze-1216-citta/)
+**Media education and public history**
+
+- [pompei-stratificata](https://github.com/D0M3N1C0X/pompei-stratificata) — Pompeii and Herculaneum from AD 79 to today, in six languages, a source next to every statement · [open the model](https://d0m3n1c0x.github.io/pompei-stratificata/)
+- [Florence, 1216](https://github.com/D0M3N1C0X/firenze-1216-citta) — the setting of a serious game for schools, in development · [walk the city](https://d0m3n1c0x.github.io/firenze-1216-citta/)
+
+### About
+
+I work where decisions about people meet evidence. The two halves of what I build, the analysis an HR function needs
+and learning tools that teach people how to read a source, come from two master's degrees, and they share one habit:
+**a claim travels with its source, the gaps are written down, and the result can be rebuilt by someone else.**
 
 ### Toolbox
 
 - **Analysis** — Python (pandas), R (tidyverse, ggplot2), SQL, Stata, Excel modelling (driver-based forecasts, variance analysis)
 - **Building** — JavaScript, HTML/CSS, Quarto, GitHub Actions: reports, dashboards and tools that run without a server
-- **HR** — Italian and EU employment law, Directive (EU) 2023/970, gender-neutral job evaluation, GDPR, employee relations
+- **HR** — Italian and EU employment law, Directive (EU) 2023/970, the AI Act at work, gender-neutral job evaluation, GDPR, employee relations
 - **Education** — learning design, media literacy, evaluation of educational programmes
 
 **How I work.** I build with an AI coding assistant, and the commit history says so. What I
@@ -104,7 +77,7 @@ was corrected.
 ### Background
 
 - MSc Politics, Administration & Organisation — University of Bologna
-- MSc Media Education — Università Cattolica del Sacro Cuore, Milan; thesis fieldwork at the
+- MSc Media Education (110/110) — Università Cattolica del Sacro Cuore, Milan; thesis fieldwork at the
   Cognitive Robotics Lab, University of Manchester
 - Erasmus+ at Jagiellonian University, Kraków — leadership and human resource management
 - BA Anthropology, Religions & Oriental Civilisations — University of Bologna
