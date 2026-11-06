@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="it" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Momentum Desk</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23161a20'/%3E%3Cpath d='M6 22l6-7 5 4 9-11' stroke='%2326a69a' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <svg viewBox="0 0 32 32" width="26" height="26" aria-hidden="true"><rect width="32" height="32" rx="7" fill="var(--surface-3)"/><path d="M6 22l6-7 5 4 9-11" stroke="var(--up)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <span>AI Momentum Desk</span>
+  </div>
+  <div class="market" id="market">
+    <span class="status-dot"></span>
+    <span class="status-label">…</span>
+    <span class="countdown muted" id="countdown"></span>
+  </div>
+  <div class="clocks muted" id="clocks"></div>
+  <div class="bench" id="bench"></div>
+  <div class="top-right">
+    <span class="provider-badge" id="provider-badge" title="">…</span>
+    <button class="icon-btn" id="theme-toggle" title="Tema chiaro/scuro" aria-label="Cambia tema"><svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true"><circle cx="10" cy="10" r="7" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 3a7 7 0 0 1 0 14z" fill="currentColor"/></svg></button>
+  </div>
+</header>
+
+<nav class="tabs" role="tablist">
+  <button class="tab active" data-view="dashboard">Dashboard</button>
+  <button class="tab" data-view="journal">Diario trade</button>
+  <button class="tab" data-view="settings">Impostazioni</button>
+  <button class="tab" data-view="guide">Guida</button>
+  <span class="updated muted" id="updated"></span>
+</nav>
+
+<div id="banners"></div>
+
+<!-- ======================= DASHBOARD ======================= -->
+<main class="view active" id="view-dashboard">
+  <section class="panel scanner-panel">
+    <div class="panel-head">
+      <h2>Scanner momentum</h2>
+      <div class="scanner-tools">
+        <select id="group-filter" aria-label="Filtra per gruppo"></select>
+        <label class="check"><input type="checkbox" id="only-signals"> Solo con segnali</label>
+      </div>
+    </div>
+    <div class="table-wrap">
+      <table class="scanner" id="scanner">
+        <thead>
+          <tr>
+            <th data-sort="symbol">Titolo</th>
+            <th data-sort="last" class="num">Prezzo</th>
+            <th data-sort="change_pct" class="num">Var %</th>
+            <th data-sort="gap_pct" class="num" title="Apertura rispetto alla chiusura di ieri">Gap %</th>
+            <th data-sort="rvol" class="num" title="Volume di oggi rispetto alla media alla stessa ora">RVOL</th>
+            <th data-sort="vwap_dist_pct" class="num" title="Distanza dal VWAP">VWAP</th>
+            <th data-sort="rel_strength" class="num opt" title="Variazione rispetto all'ETF dei semiconduttori (SMH)">vs SMH</th>
+            <th data-sort="score">Segnali</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <p class="hint muted">Clicca su un titolo per aprire il grafico. Ordinamento predefinito: forza del momentum.</p>
+  </section>
+
+  <section class="panel chart-panel">
+    <div class="chart-head">
+      <div class="chart-title">
+        <span class="sym" id="chart-symbol">—</span>
+        <span class="price" id="chart-price"></span>
+        <span class="chg" id="chart-change"></span>
+        <span class="trend muted" id="chart-trend"></span>
+      </div>
+      <div class="chart-tools">
+        <div class="seg" id="tf-buttons" role="group" aria-label="Timeframe">
+          <button data-tf="1Min">1m</button><button data-tf="5Min" class="active">5m</button><button data-tf="15Min">15m</button>
+        </div>
+        <select id="sessions" aria-label="Giorni visualizzati">
+          <option value="1">Oggi</option><option value="2" selected>2 giorni</option><option value="3">3 giorni</option><option value="5">5 giorni</option>
+        </select>
+        <label class="check"><input type="checkbox" id="show-levels" checked> Livelli</label>
+      </div>
+    </div>
+    <div class="chart-wrap">
+      <div id="chart"></div>
+      <div class="chart-legend" id="chart-legend"></div>
+      <div class="chart-empty muted" id="chart-empty" hidden>Seleziona un titolo dallo scanner</div>
+    </div>
+    <div class="levels" id="levels"></div>
+  </section>
+
+  <aside class="side">
+   <div class="side-col">
+    <section class="panel">
+      <div class="panel-head"><h2>Rischio di oggi</h2><span class="muted small" id="daily-trades"></span></div>
+      <div class="daily" id="daily"></div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head"><h2>Calcolatore posizione</h2><span class="muted small" id="calc-capital"></span></div>
+      <form class="calc" id="calc" autocomplete="off">
+        <input id="calc-symbol" type="hidden">
+        <label>Entrata $<input id="calc-entry" type="number" step="0.01" inputmode="decimal"></label>
+        <label>Stop $<input id="calc-stop" type="number" step="0.01" inputmode="decimal"></label>
+        <div class="full calc-hint"><button type="button" class="mini" id="calc-use-last" title="Usa l'ultimo prezzo come entrata">Entrata = ultimo prezzo</button><span class="muted small">Stop rapido sui livelli:</span></div>
+        <div class="stop-buttons full" id="stop-buttons"></div>
+      </form>
+      <div class="calc-result" id="calc-result"><p class="muted">Inserisci entrata e stop: calcolo quante azioni comprare rispettando il tuo rischio massimo.</p></div>
+    </section>
+   </div>
+
+    <section class="panel">
+      <div class="panel-head"><h2>Avvisi</h2><button class="mini" id="clear-alerts">Svuota</button></div>
+      <form class="price-alert" id="price-alert-form" autocomplete="off">
+        <select id="pa-op" aria-label="Condizione"><option value="above">supera</option><option value="below">scende sotto</option></select>
+        <input id="pa-price" type="number" step="0.01" placeholder="prezzo $" inputmode="decimal" aria-label="Prezzo">
+        <button class="mini primary" type="submit">+ Avviso</button>
+      </form>
+      <ul class="price-alerts" id="price-alerts"></ul>
+      <ul class="alert-log" id="alert-log"><li class="muted">Qui compaiono i nuovi segnali (rotture, setup) e gli avvisi di prezzo.</li></ul>
+    </section>
+
+    <section class="panel news-panel">
+      <div class="panel-head"><h2>Notizie</h2><label class="check"><input type="checkbox" id="news-all"> Tutta la watchlist</label></div>
+      <div class="news-summary" id="news-summary"></div>
+      <ul class="news" id="news"></ul>
+    </section>
+  </aside>
+</main>
+
+<!-- ======================= DIARIO ======================= -->
+<main class="view" id="view-journal">
+  <section class="panel">
+    <div class="panel-head"><h2>Riepilogo</h2><a class="mini" href="/api/journal.csv" download>Esporta CSV</a></div>
+    <div class="stat-tiles" id="journal-stats"></div>
+  </section>
+  <section class="panel">
+    <div class="panel-head"><h2>Nuovo trade</h2></div>
+    <form class="journal-form" id="journal-form" autocomplete="off">
+      <label>Data<input name="date" type="date"></label>
+      <label>Ora<input name="time" type="time"></label>
+      <label>Titolo<input name="symbol" required placeholder="NVDA"></label>
+      <label>Lato<select name="side"><option value="long">Long (acquisto)</option><option value="short">Short (vendita)</option></select></label>
+      <label>Quantità<input name="qty" type="number" min="1" step="1" required></label>
+      <label>Entrata $<input name="entry" type="number" step="0.01" required></label>
+      <label>Stop $<input name="stop" type="number" step="0.01"></label>
+      <label>Uscita $<input name="exit" type="number" step="0.01" placeholder="vuoto = aperto"></label>
+      <label>Setup<select name="setup">
+        <option>ORB long</option><option>ORB short</option><option>Rottura PDH</option><option>Rottura PMH</option>
+        <option>Gap and go</option><option>VWAP reclaim</option><option>Rottura massimo del giorno</option><option>Altro</option>
+      </select></label>
+      <label>Commissione € (per ordine)<input name="commission_eur" type="number" step="0.01" min="0"></label>
+      <label class="wide">Note<input name="notes" placeholder="Perché sono entrato, cosa ho fatto bene/male"></label>
+      <button class="primary" type="submit">Salva trade</button>
+    </form>
+  </section>
+  <section class="panel">
+    <div class="panel-head"><h2>Trade</h2></div>
+    <div class="table-wrap">
+      <table class="journal" id="journal-table">
+        <thead><tr><th>Data</th><th>Titolo</th><th>Lato</th><th class="num">Q.tà</th><th class="num">Entrata</th><th class="num">Stop</th><th class="num">Uscita</th><th class="num">P&amp;L €</th><th class="num">R</th><th>Setup</th><th>Note</th><th></th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+  <section class="panel">
+    <div class="panel-head"><h2>Risultati per setup</h2></div>
+    <div class="table-wrap"><table class="journal" id="setup-table"><thead><tr><th>Setup</th><th class="num">Trade</th><th class="num">Vincenti</th><th class="num">P&amp;L €</th></tr></thead><tbody></tbody></table></div>
+  </section>
+</main>
+
+<!-- ======================= IMPOSTAZIONI ======================= -->
+<main class="view" id="view-settings">
+  <section class="panel">
+    <div class="panel-head"><h2>Fonte dati</h2></div>
+    <form class="settings-form" id="provider-form" autocomplete="off">
+      <label>Fonte<select name="DATA_PROVIDER">
+        <option value="demo">Demo (dati simulati)</option>
+        <option value="alpaca">Alpaca (consigliata)</option>
+        <option value="yahoo">Yahoo Finance (non ufficiale)</option>
+      </select></label>
+      <label>Alpaca API Key ID<input name="ALPACA_KEY_ID" placeholder="es. PK…" spellcheck="false"></label>
+      <label>Alpaca Secret Key<input name="ALPACA_SECRET_KEY" type="password" placeholder="lascia vuoto per non cambiarla" spellcheck="false"></label>
+      <label>Feed Alpaca<select name="ALPACA_FEED"><option value="iex">IEX (gratuito, tempo reale)</option><option value="sip">SIP (a pagamento, tutte le borse)</option></select></label>
+      <div class="form-actions"><button class="primary" type="submit">Salva e collega</button><button type="button" id="provider-test">Prova connessione</button></div>
+      <p class="form-msg" id="provider-msg"></p>
+      <p class="muted small">Le chiavi vengono salvate solo sul tuo computer, nel file <code>config.env</code> della cartella del progetto. Non condividerlo.</p>
+    </form>
+  </section>
+
+  <section class="panel">
+    <div class="panel-head"><h2>Watchlist</h2><button class="mini" id="add-group">+ Gruppo</button></div>
+    <div id="watchlist-editor"></div>
+    <label class="inline-label">ETF/indici in alto<input id="benchmarks" placeholder="SPY, QQQ, SMH"></label>
+    <label class="inline-label">ETF di settore per la forza relativa<input id="sector-benchmark" placeholder="SMH"></label>
+    <div class="form-actions"><button class="primary" id="save-watchlist">Salva watchlist</button></div>
+    <p class="form-msg" id="watchlist-msg"></p>
+  </section>
+
+  <section class="panel">
+    <div class="panel-head"><h2>Regole di rischio</h2></div>
+    <form class="settings-form grid2" id="risk-form" autocomplete="off">
+      <label>Capitale del conto €<input name="capital_eur" type="number" step="100" min="0"></label>
+      <label>Rischio per trade %<input name="risk_pct" type="number" step="0.1" min="0.1" max="10"></label>
+      <label>Perdita massima giornaliera %<input name="daily_loss_pct" type="number" step="0.5" min="0.5" max="20"></label>
+      <label>Posizione massima % del capitale<input name="max_position_pct" type="number" step="5" min="1" max="400"></label>
+      <label>Numero massimo di trade al giorno (0 = nessun limite)<input name="max_trades_per_day" type="number" step="1" min="0"></label>
+      <label>Commissione per ordine €<input name="commission_eur" type="number" step="0.01" min="0"></label>
+      <label>Cambio EUR/USD<span class="inline"><input name="eurusd" type="number" step="0.0001" min="0.5" max="2"><button type="button" class="mini" id="fx-update">Aggiorna (BCE)</button></span></label>
+      <div class="form-actions"><button class="primary" type="submit">Salva regole</button></div>
+      <p class="form-msg" id="risk-msg"></p>
+    </form>
+  </section>
+
+  <section class="panel">
+    <div class="panel-head"><h2>Scanner e avvisi</h2></div>
+    <form class="settings-form grid2" id="scanner-form" autocomplete="off">
+      <label>Opening range (minuti)<select name="or_minutes"><option>5</option><option>15</option><option>30</option></select></label>
+      <label>Soglia volume relativo (RVOL)<input name="rvol_threshold" type="number" step="0.1" min="1"></label>
+      <label>Soglia gap %<input name="gap_threshold" type="number" step="0.5" min="0.5"></label>
+      <label>Giorni per la media del volume<input name="rvol_days" type="number" step="1" min="3" max="20"></label>
+      <label>Aggiornamento ogni (secondi)<input name="refresh_seconds" type="number" step="1" min="5" max="300"></label>
+      <label class="check"><input type="checkbox" name="sound"> Suono sugli avvisi</label>
+      <label class="check"><input type="checkbox" name="browser_notifications"> Notifiche del browser</label>
+      <fieldset class="full"><legend>Segnali che generano un avviso</legend><div class="signal-checks" id="signal-checks"></div></fieldset>
+      <div class="form-actions"><button class="primary" type="submit">Salva</button></div>
+      <p class="form-msg" id="scanner-msg"></p>
+    </form>
+  </section>
+</main>
+
+<!-- ======================= GUIDA ======================= -->
+<main class="view" id="view-guide">
+  <section class="panel prose">
+    <h2>Come leggere la dashboard</h2>
+    <p>La dashboard è pensata per il <strong>day trading momentum/breakout</strong> sui titoli legati all'AI. Gli orari sono in <strong>ora italiana</strong>: il mercato USA apre alle 15:30 e chiude alle 22:00 (per qualche settimana l'anno, quando i cambi d'ora di USA ed Europa non coincidono, apre alle 14:30: la dashboard lo gestisce da sola).</p>
+    <h3>Flusso di lavoro consigliato</h3>
+    <ol>
+      <li><strong>Premarket (10:00–15:30):</strong> guarda i titoli con gap e volume relativo alto, e leggi le notizie: sono i candidati della giornata.</li>
+      <li><strong>Primi 15 minuti:</strong> lascia formare il range d'apertura (ORH/ORL). Non inseguire le prime candele.</li>
+      <li><strong>Rottura:</strong> il segnale più forte è <em>Setup long/short</em>: rottura del range d'apertura, nella direzione del VWAP, con volume relativo alto e trend delle EMA allineato.</li>
+      <li><strong>Prima di entrare:</strong> metti lo stop (VWAP, ORL o minimo recente) nel calcolatore e compra solo le azioni indicate.</li>
+      <li><strong>Dopo l'uscita:</strong> registra il trade nel diario. Se compare il blocco dello stop giornaliero, per oggi hai finito.</li>
+    </ol>
+    <h3>Colonne dello scanner</h3>
+    <dl class="glossary">
+      <dt>Var %</dt><dd>Variazione rispetto alla chiusura di ieri.</dd>
+      <dt>Gap %</dt><dd>Apertura di oggi rispetto alla chiusura di ieri (in premarket: prezzo attuale).</dd>
+      <dt>RVOL</dt><dd>Volume relativo: volume di oggi fino a quest'ora diviso la media degli ultimi giorni alla stessa ora. 2,0 = il doppio del solito. È l'indicatore chiave per il momentum.</dd>
+      <dt>VWAP</dt><dd>Prezzo medio ponderato per i volumi della sessione. Sopra il VWAP comandano i compratori, sotto i venditori.</dd>
+      <dt>vs SMH</dt><dd>Forza relativa: quanto il titolo fa meglio (o peggio) dell'ETF dei semiconduttori.</dd>
+      <dt>ORH / ORL</dt><dd>Massimo e minimo dei primi minuti di contrattazione (opening range).</dd>
+      <dt>PDH / PDL / PDC</dt><dd>Massimo, minimo e chiusura di ieri.</dd>
+      <dt>PMH / PML</dt><dd>Massimo e minimo del premarket.</dd>
+      <dt>ATR</dt><dd>Escursione media giornaliera degli ultimi 14 giorni: misura quanto si muove di solito il titolo.</dd>
+      <dt>RSI</dt><dd>Sopra 70 ipercomprato, sotto 30 ipervenduto. Nel momentum un RSI alto spesso resta alto: usalo come contesto, non come segnale di vendita.</dd>
+      <dt>MACD</dt><dd>Differenza tra due medie mobili: l'istogramma sopra zero indica momentum in crescita.</dd>
+    </dl>
+    <h3>Segnali</h3>
+    <dl class="glossary" id="guide-signals"></dl>
+    <h3>Limiti da conoscere</h3>
+    <ul>
+      <li>Con il piano gratuito di Alpaca (feed IEX) i volumi arrivano da una sola borsa: i numeri assoluti sono più bassi del reale, ma il volume relativo resta confrontabile.</li>
+      <li>Il sentiment delle notizie è calcolato con parole chiave: è un'indicazione rapida, leggi sempre la notizia.</li>
+      <li>La dashboard non invia ordini: gli ordini li inserisci tu su Directa.</li>
+      <li>È uno strumento di analisi, non un consiglio di investimento. Il day trading comporta il rischio di perdere il capitale.</li>
+    </ul>
+  </section>
+</main>
+
+<div class="toasts" id="toasts" aria-live="polite"></div>
+
+<script src="vendor/lightweight-charts.standalone.production.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
