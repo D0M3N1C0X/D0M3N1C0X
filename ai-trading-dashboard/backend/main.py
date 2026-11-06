@@ -21,7 +21,7 @@ from .providers.demo import DemoProvider
 from .scanner import SIGNALS, Scanner
 
 SYMBOL = re.compile(r"^[A-Z][A-Z0-9.\-]{0,9}$")
-VERSION = "0.1.0"
+VERSION = "0.2.0"
 
 app = FastAPI(title="AI Momentum Desk", version=VERSION)
 

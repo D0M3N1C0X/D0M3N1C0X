@@ -1,0 +1,118 @@
+name: AI Momentum Desk - app desktop
+
+# Costruisce l'app per Mac e Windows a ogni modifica della dashboard.
+# I file da scaricare sono in fondo alla pagina dell'esecuzione (sezione "Artifacts").
+# Con un tag "desktop-v*" (es. desktop-v0.2.0) pubblica anche una Release.
+on:
+  workflow_dispatch:
+  push:
+    branches: ["**"]
+    paths:
+      - "ai-trading-dashboard/**"
+      - ".github/workflows/desktop-app.yml"
+    tags: ["desktop-v*"]
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    working-directory: ai-trading-dashboard
+    shell: bash
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements-dev.txt
+      - run: python -m pytest -q
+
+  build:
+    needs: test
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: macos-15
+            name: macOS
+          - os: windows-latest
+            name: Windows
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Installa i componenti
+        run: pip install -r requirements-desktop.txt
+      - name: Costruisci l'app
+        run: python desktop/build.py
+
+      - name: Percorso dell'eseguibile
+        id: exe
+        run: |
+          if [ "${{ runner.os }}" = "macOS" ]; then
+            echo "path=dist/AI Momentum Desk.app/Contents/MacOS/AI Momentum Desk" >> "$GITHUB_OUTPUT"
+          else
+            echo "path=dist/AI Momentum Desk/AI Momentum Desk.exe" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Test del pacchetto (server e API)
+        env:
+          AITD_DATA_DIR: ${{ runner.temp }}/selftest
+        run: |
+          code=0
+          "${{ steps.exe.outputs.path }}" --selftest || code=$?
+          cat "$AITD_DATA_DIR/app.log"
+          exit $code
+
+      - name: Test della finestra (apre l'app e controlla lo scanner)
+        env:
+          AITD_DATA_DIR: ${{ runner.temp }}/smoke
+          AITD_SMOKE_OUT: ${{ runner.temp }}/smoke.json
+        run: |
+          "${{ steps.exe.outputs.path }}" &
+          pid=$!
+          for i in $(seq 1 120); do [ -f "$AITD_SMOKE_OUT" ] && break; sleep 1; done
+          sleep 2; kill $pid 2>/dev/null || true
+          echo "--- app.log"; cat "$AITD_DATA_DIR/app.log" || true
+          echo "--- esito"; cat "$AITD_SMOKE_OUT"
+          python -c "import json,sys; r=json.load(open(sys.argv[1])); print(r); sys.exit(0 if r.get('rows',0)>0 and r.get('bridge') else 1)" "$AITD_SMOKE_OUT"
+
+      - name: Crea lo zip (macOS)
+        if: runner.os == 'macOS'
+        run: ditto -c -k --sequesterRsrc --keepParent "dist/AI Momentum Desk.app" "AI-Momentum-Desk-macOS.zip"
+      - name: Crea lo zip (Windows)
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: Compress-Archive -Path "dist/AI Momentum Desk" -DestinationPath "AI-Momentum-Desk-Windows.zip"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: AI-Momentum-Desk-${{ matrix.name }}
+          path: ai-trading-dashboard/AI-Momentum-Desk-${{ matrix.name }}.zip
+          retention-days: 30
+
+  release:
+    if: startsWith(github.ref, 'refs/tags/desktop-v')
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+          merge-multiple: true
+      - uses: softprops/action-gh-release@v2
+        with:
+          name: AI Momentum Desk ${{ github.ref_name }}
+          files: artifacts/*.zip
+          body: |
+            App desktop di AI Momentum Desk per Mac (Apple Silicon) e Windows.
+            Istruzioni di installazione: vedi ai-trading-dashboard/README.md.
+            Strumento di analisi, non consulenza finanziaria.

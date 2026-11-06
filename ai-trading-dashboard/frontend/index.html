@@ -134,7 +134,7 @@
 <!-- ======================= DIARIO ======================= -->
 <main class="view" id="view-journal">
   <section class="panel">
-    <div class="panel-head"><h2>Riepilogo</h2><a class="mini" href="/api/journal.csv" download>Esporta CSV</a></div>
+    <div class="panel-head"><h2>Riepilogo</h2><a class="mini" id="export-csv" href="/api/journal.csv" download>Esporta CSV</a></div>
     <div class="stat-tiles" id="journal-stats"></div>
   </section>
   <section class="panel">
@@ -187,7 +187,8 @@
       <label>Feed Alpaca<select name="ALPACA_FEED"><option value="iex">IEX (gratuito, tempo reale)</option><option value="sip">SIP (a pagamento, tutte le borse)</option></select></label>
       <div class="form-actions"><button class="primary" type="submit">Salva e collega</button><button type="button" id="provider-test">Prova connessione</button></div>
       <p class="form-msg" id="provider-msg"></p>
-      <p class="muted small">Le chiavi vengono salvate solo sul tuo computer, nel file <code>config.env</code> della cartella del progetto. Non condividerlo.</p>
+      <p class="muted small">Le chiavi vengono salvate solo sul tuo computer, nel file <code>config.env</code>. Non condividerlo.</p>
+      <p class="muted small" id="desktop-data" hidden>Impostazioni, diario e chiavi dell'app sono in <code id="desktop-data-path"></code> <button type="button" class="mini" id="open-data">Apri cartella dati</button></p>
     </form>
   </section>
 
@@ -224,7 +225,7 @@
       <label>Giorni per la media del volume<input name="rvol_days" type="number" step="1" min="3" max="20"></label>
       <label>Aggiornamento ogni (secondi)<input name="refresh_seconds" type="number" step="1" min="5" max="300"></label>
       <label class="check"><input type="checkbox" name="sound"> Suono sugli avvisi</label>
-      <label class="check"><input type="checkbox" name="browser_notifications"> Notifiche del browser</label>
+      <label class="check"><input type="checkbox" name="browser_notifications"> Notifiche di sistema/browser</label>
       <fieldset class="full"><legend>Segnali che generano un avviso</legend><div class="signal-checks" id="signal-checks"></div></fieldset>
       <div class="form-actions"><button class="primary" type="submit">Salva</button></div>
       <p class="form-msg" id="scanner-msg"></p>

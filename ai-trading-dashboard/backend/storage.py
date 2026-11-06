@@ -1,30 +1,52 @@
 """Salvataggio locale: impostazioni, diario dei trade e chiavi API.
 
-Tutto resta sul tuo computer, nella cartella del progetto:
-- config.env           fonte dati e chiavi API (non va mai condiviso)
-- data/settings.json   watchlist, rischio, scanner, avvisi
-- data/journal.json    diario dei trade
+Tutto resta sul tuo computer.
+- Versione da cartella (avvia.command / avvia.bat): nella cartella del progetto,
+  in config.env e data/.
+- App installata: nella cartella dati dell'utente
+  (Mac: ~/Library/Application Support/AI Momentum Desk,
+   Windows: %APPDATA%\\AI Momentum Desk).
+
+File:
+- config.env      fonte dati e chiavi API (non va mai condiviso)
+- settings.json   watchlist, rischio, scanner, avvisi
+- journal.json    diario dei trade
 """
 from __future__ import annotations
 
 import copy
 import json
 import os
+import sys
 import threading
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
+APP_NAME = "AI Momentum Desk"
+# Nell'app installata (PyInstaller) i file dell'interfaccia stanno in sys._MEIPASS.
+FROZEN = bool(getattr(sys, "frozen", False))
+ROOT = Path(getattr(sys, "_MEIPASS", Path(__file__).resolve().parent.parent))
 _lock = threading.Lock()
 
 
+def user_data_dir() -> Path:
+    """Cartella dati standard del sistema operativo per l'app installata."""
+    if sys.platform == "darwin":
+        return Path.home() / "Library" / "Application Support" / APP_NAME
+    if sys.platform == "win32":
+        return Path(os.environ.get("APPDATA") or Path.home() / "AppData" / "Roaming") / APP_NAME
+    return Path(os.environ.get("XDG_DATA_HOME") or Path.home() / ".local" / "share") / "ai-momentum-desk"
+
+
 def data_dir() -> Path:
-    d = Path(os.environ.get("AITD_DATA_DIR", ROOT / "data"))
+    default = user_data_dir() if FROZEN else ROOT / "data"
+    d = Path(os.environ.get("AITD_DATA_DIR") or default)
     d.mkdir(parents=True, exist_ok=True)
     return d
 
 
 def config_path() -> Path:
-    return Path(os.environ.get("AITD_CONFIG", ROOT / "config.env"))
+    default = data_dir() / "config.env" if FROZEN else ROOT / "config.env"
+    return Path(os.environ.get("AITD_CONFIG") or default)
 
 
 DEFAULT_SETTINGS = {

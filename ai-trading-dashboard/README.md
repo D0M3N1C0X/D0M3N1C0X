@@ -22,24 +22,61 @@ Gli orari sono in **ora italiana**. La dashboard **non invia ordini**: gli ordin
 
 ---
 
-## Avvio in 3 passi
+## Installazione
 
-### 1. Installa Python (solo la prima volta)
-Scarica Python 3 da **https://www.python.org/downloads/** e installalo.
-- **Windows:** durante l'installazione spunta **"Add python.exe to PATH"**.
-- **Mac:** apri il file `.pkg` scaricato e segui l'installazione.
+Ci sono due modi per usarla:
 
-### 2. Scarica il progetto
-Su GitHub premi **Code → Download ZIP**, estrai lo ZIP e apri la cartella `ai-trading-dashboard`.
+| | **App installabile** (consigliata) | **Da cartella** |
+|---|---|---|
+| Come si apre | Icona nel Dock o nel menu Start, finestra propria | Doppio clic su `avvia.command` / `avvia.bat`, si apre nel browser |
+| Serve Python | No | Sì |
+| Sistemi | Mac con chip Apple (M1 e successivi), Windows 10/11 | Mac (anche Intel), Windows, Linux |
 
-### 3. Avvia la dashboard
-- **Mac:** doppio clic su **`avvia.command`**. La prima volta macOS potrebbe bloccarlo: in quel caso fai clic destro, scegli **Apri** e conferma. Se non parte, apri il Terminale, trascina il file nella finestra e premi Invio.
-- **Windows:** doppio clic su **`avvia.bat`**.
-- **Linux:** `./avvia.sh`
+### A. App installabile
 
-Il primo avvio richiede circa un minuto, perché installa i componenti. Poi il browser si apre da solo su `http://127.0.0.1:8765`. **Lascia aperta la finestra nera** finché usi la dashboard: chiudendola, la dashboard si ferma.
+**1. Scarica l'app.** Su GitHub apri la scheda **Actions** del repository, poi il workflow **"AI Momentum Desk - app desktop"** e l'ultima esecuzione con la spunta verde. In fondo, nella sezione **Artifacts**, scarica:
+- `AI-Momentum-Desk-macOS` per Mac
+- `AI-Momentum-Desk-Windows` per Windows
 
-All'inizio la dashboard è in **modalità demo**, con dati simulati, così puoi provare tutto subito.
+GitHub lo scarica come zip che contiene un altro zip: estrai il primo, poi il secondo. Se è stata pubblicata una **Release**, puoi scaricare lo zip direttamente da lì.
+
+**2. Installa e apri.**
+
+**Mac:**
+1. Trascina **AI Momentum Desk.app** nella cartella **Applicazioni**.
+2. Al primo avvio macOS mostra un avviso, perché l'app non è firmata con un certificato Apple a pagamento. Premi **Fine**, poi apri **Impostazioni di Sistema → Privacy e sicurezza**, scorri in basso e premi **Apri comunque** accanto ad "AI Momentum Desk". Conferma con la password del Mac.
+
+   In alternativa, dal Terminale:
+   ```
+   xattr -dr com.apple.quarantine "/Applications/AI Momentum Desk.app"
+   ```
+3. Dalla seconda volta si apre normalmente, anche dal Launchpad o dal Dock.
+
+**Windows:**
+1. Sposta la cartella **AI Momentum Desk** dove preferisci (per esempio in Documenti) e apri **AI Momentum Desk.exe**. Per comodità, fai clic destro e scegli **Aggiungi a Start** o **Crea collegamento**.
+2. Se compare "Windows ha protetto il PC", premi **Ulteriori informazioni → Esegui comunque**. Succede perché l'app non è firmata digitalmente.
+3. La finestra usa Microsoft Edge WebView2, già presente in Windows 10 e 11 aggiornati.
+
+**Dove sono i tuoi dati.** L'app salva impostazioni, diario e chiavi nella cartella dati del sistema:
+- **Mac:** `~/Library/Application Support/AI Momentum Desk`
+- **Windows:** `%APPDATA%\AI Momentum Desk`
+
+In **Impostazioni** c'è il pulsante **Apri cartella dati**. Se usavi già la versione da cartella, copia lì dentro `config.env` e i file `settings.json` e `journal.json` della cartella `data/`. Aggiornando l'app i dati restano dove sono.
+
+Nell'app le notifiche degli avvisi arrivano nel **Centro notifiche** del Mac. Su Windows compaiono nella finestra, con il suono.
+
+### B. Da cartella (con Python)
+
+1. **Installa Python 3** da **https://www.python.org/downloads/**. Su Windows spunta **"Add python.exe to PATH"** durante l'installazione.
+2. **Scarica il progetto:** su GitHub premi **Code → Download ZIP**, estrai e apri la cartella `ai-trading-dashboard`.
+3. **Avvia:**
+   - **Mac:** doppio clic su **`avvia.command`**. Se macOS lo blocca, fai clic destro, scegli **Apri** e conferma.
+   - **Windows:** doppio clic su **`avvia.bat`**.
+   - **Linux:** `./avvia.sh`
+
+Il primo avvio richiede circa un minuto, poi il browser si apre su `http://127.0.0.1:8765`. **Lascia aperta la finestra nera** finché usi la dashboard.
+
+All'inizio, in entrambi i casi, la dashboard è in **modalità demo** con dati simulati, così puoi provare tutto subito.
 
 ---
 
@@ -93,14 +130,15 @@ Si cambiano dalla scheda **Impostazioni**, senza toccare codice:
 ## Privacy e sicurezza
 
 - La dashboard gira **solo sul tuo computer**: è raggiungibile solo dall'indirizzo `127.0.0.1` e nessun altro dispositivo in rete può aprirla.
-- Impostazioni e diario sono salvati in `data/`, le chiavi in `config.env`. Entrambi sono esclusi da Git.
+- Impostazioni, diario e chiavi sono salvati sul tuo computer: nella cartella del progetto (`data/` e `config.env`, esclusi da Git) oppure, nell'app, nella cartella dati del sistema.
 - Le uniche connessioni esterne sono verso la fonte dati che scegli e, se premi "Aggiorna (BCE)", verso la Banca Centrale Europea per il cambio.
 
 ---
 
 ## Prossimi passi (app completa)
 
-- Versione desktop installabile (icona sul Dock o nel menu Start, senza finestra nera).
+- Firma digitale delle app (certificato Apple Developer e Windows), così non compaiono gli avvisi di sicurezza al primo avvio.
+- Versione per Mac Intel.
 - Integrazione con **Directa** tramite la piattaforma Darwin, da valutare sulla documentazione ufficiale delle API Directa.
 - Grafico giornaliero e multi-giorno, heatmap del settore AI, calendario delle trimestrali.
 - Statistiche del diario per fascia oraria e per titolo, con grafico dell'equity.
@@ -119,8 +157,21 @@ backend/            server Python (FastAPI)
   market.py         orari e festività NYSE, fusi orari
   providers/        alpaca.py, yahoo.py, demo.py (dati simulati)
 frontend/           HTML/CSS/JS senza build; grafici con TradingView Lightweight Charts (Apache 2.0)
+  desktop.py        app desktop: finestra nativa (pywebview) + server in background
+desktop/            build.py (PyInstaller), icone, make_icons.py
+desktop_main.py     punto di ingresso dell'app
 tests/              test automatici (pytest)
 ```
+
+Per costruire l'app sul proprio computer (quella per Mac si costruisce su un Mac, quella per Windows su Windows):
+
+```
+pip install -r requirements-desktop.txt
+python desktop/build.py              # crea dist/AI Momentum Desk(.app)
+python desktop_main.py --selftest    # verifica server e API senza aprire la finestra
+```
+
+Il workflow `.github/workflows/desktop-app.yml` fa tutto questo in automatico, su Mac e su Windows, a ogni modifica.
 
 Per eseguire i test:
 

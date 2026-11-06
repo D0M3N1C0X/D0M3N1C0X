@@ -71,6 +71,17 @@ function toast(text, tone = "info", onClick) {
   while ($("#toasts").children.length > 4) $("#toasts").lastChild.remove();
 }
 
+/* App desktop (pywebview): funzioni native esposte come window.pywebview.api */
+const desktop = () => !!(window.pywebview && window.pywebview.api);
+window.addEventListener("pywebviewready", async () => {
+  document.documentElement.classList.add("desktop");
+  try {
+    const info = await window.pywebview.api.info();
+    $("#desktop-data-path").textContent = info.data_dir;
+    $("#desktop-data").hidden = false;
+  } catch { /* ponte non disponibile */ }
+});
+
 let audioCtx = null;
 document.addEventListener("click", () => { if (!audioCtx && window.AudioContext) audioCtx = new AudioContext(); }, { once: true });
 function beep(tone) {
@@ -235,8 +246,11 @@ function pushAlert(sym, text, tone) {
   renderAlertLog();
   toast(`<b>${esc(sym)}</b> · ${esc(text)}`, tone, () => select(sym));
   beep(tone);
-  if (S.settings.alerts.browser_notifications && "Notification" in window && Notification.permission === "granted") {
-    try { new Notification(`${sym}: ${text}`, { body: "AI Momentum Desk", tag: sym + text }); } catch { /* ignorato */ }
+  if (S.settings.alerts.browser_notifications) {
+    if (desktop()) window.pywebview.api.notify(`${sym}: ${text}`, "AI Momentum Desk").catch(() => {});
+    else if ("Notification" in window && Notification.permission === "granted") {
+      try { new Notification(`${sym}: ${text}`, { body: "AI Momentum Desk", tag: sym + text }); } catch { /* ignorato */ }
+    }
   }
 }
 
@@ -685,6 +699,17 @@ function renderJournal() {
     .join("") || `<tr><td colspan="4" class="muted">Le statistiche per setup compaiono dopo i primi trade chiusi.</td></tr>`;
 }
 
+$("#export-csv").onclick = async (e) => {
+  if (!desktop()) return; // nel browser basta il download normale
+  e.preventDefault();
+  try {
+    const text = await (await fetch("/api/journal.csv")).text();
+    const r = await window.pywebview.api.save_csv("diario-trade.csv", text);
+    if (r.ok) toast(`Diario salvato in ${esc(r.path)}`, "info");
+  } catch (err) { toast(esc(err.message || err), "bear"); }
+};
+$("#open-data").onclick = () => desktop() && window.pywebview.api.open_data_folder();
+
 function resetJournalForm() {
   const f = $("#journal-form");
   f.reset();
@@ -795,7 +820,7 @@ $("#scanner-form").onsubmit = async (e) => {
     browser_notifications: f.browser_notifications.checked,
     signals: $$("#signal-checks input:checked").map((i) => i.value),
   };
-  if (alerts.browser_notifications && "Notification" in window && Notification.permission === "default") {
+  if (alerts.browser_notifications && !desktop() && "Notification" in window && Notification.permission === "default") {
     await Notification.requestPermission();
   }
   saveSettings({ scanner, alerts }, "#scanner-msg");
