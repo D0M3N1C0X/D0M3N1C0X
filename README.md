@@ -1,4 +1,4 @@
-<a href="https://github.com/D0M3N1C0X/d0m3n1c0x.github.io"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/D0M3N1C0X/d0m3n1c0x.github.io/main/site-assets/cover-dark.png"><img alt="Domenico Perroni: HR advisory, people analytics, reward. 3,515 figures reconciled between Python and Excel, 12 projects to open live." src="https://raw.githubusercontent.com/D0M3N1C0X/d0m3n1c0x.github.io/main/site-assets/cover-light.png" width="100%"></picture></a>
+<a href="https://github.com/D0M3N1C0X/d0m3n1c0x.github.io"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/D0M3N1C0X/d0m3n1c0x.github.io/main/site-assets/cover-dark.png"><img alt="Domenico Perroni: HR advisory, people analytics, reward. 5,234 figures reconciled between Python and Excel, 12 projects to open live." src="https://raw.githubusercontent.com/D0M3N1C0X/d0m3n1c0x.github.io/main/site-assets/cover-light.png" width="100%"></picture></a>
 
 ## Domenico Perroni
 
@@ -14,10 +14,10 @@ Italian, based in Kraków. Open to conversations about HR advisory and reward ro
   511 checks, and a browser tool that runs the assessment on a client's own payroll.
   [Report](https://d0m3n1c0x.github.io/pay-transparency-readiness-kit/) · [Tool](https://d0m3n1c0x.github.io/pay-transparency-readiness-kit/tool/)
 - **The AI Act for an HR function**: twelve AI systems classified, one to stop now, seven high-risk with duties from
-  2 December 2027, and whom to tell under labour law in four countries.
+  2 December 2027, and whom to tell under labour law in nine countries.
   [Tool](https://d0m3n1c0x.github.io/ai-act-hr-readiness-kit/tool/) · [Report](https://d0m3n1c0x.github.io/ai-act-hr-readiness-kit/)
-- **Fourteen pre-release checks on Italian payslips** (CCNL Terziario): 35 of 35 planted errors found, no false
-  alarms, in a browser tool where payroll files never leave the computer.
+- **Nineteen pre-release checks on Italian payslips** (CCNL Terziario): INPS rates, sick pay, severance at leaving;
+  44 of 44 planted errors found, no false alarms, in a browser tool where payroll files never leave the computer.
   [Tool](https://d0m3n1c0x.github.io/controlli-cedolini/strumento/) · [Report](https://d0m3n1c0x.github.io/controlli-cedolini/)
 
 Day job: HR advisory for the Italian market in Amazon's pan-European HR services, 150–180 employee cases a week with a
@@ -37,7 +37,7 @@ Day job: HR advisory for the Italian market in Amazon's pan-European HR services
 - [equal-value-pay-ranges](https://github.com/D0M3N1C0X/equal-value-pay-ranges) — one pay range per grade and country, priced on Eurostat data, and the range to publish for every vacancy · [report](https://d0m3n1c0x.github.io/equal-value-pay-ranges/) · [pay range finder](https://d0m3n1c0x.github.io/equal-value-pay-ranges/ads.html)
 - [ai-act-hr-readiness-kit](https://github.com/D0M3N1C0X/ai-act-hr-readiness-kit) — HR's AI systems under the AI Act: what each owes, from when, and whom to tell · [tool](https://d0m3n1c0x.github.io/ai-act-hr-readiness-kit/tool/) · [report](https://d0m3n1c0x.github.io/ai-act-hr-readiness-kit/)
 - [where-pay-transparency-bites](https://github.com/D0M3N1C0X/where-pay-transparency-bites) — the gender pay gap inside sectors for all 27 Member States, in R and Quarto · [article](https://d0m3n1c0x.github.io/where-pay-transparency-bites/) · [dashboard](https://d0m3n1c0x.github.io/where-pay-transparency-bites/dashboard/) · [working paper, DOI](https://doi.org/10.5281/zenodo.23645870)
-- [workforce-cost-model](https://github.com/D0M3N1C0X/workforce-cost-model) — Italian and Polish people costs, a budget variance and four scenarios for next year · [memo](https://d0m3n1c0x.github.io/workforce-cost-model/) · [simulator](https://d0m3n1c0x.github.io/workforce-cost-model/simulator/)
+- [workforce-cost-model](https://github.com/D0M3N1C0X/workforce-cost-model) — people costs in Italy, Poland, Germany and Spain, a budget variance, five scenarios, the outlook after October and a headcount plan · [memo](https://d0m3n1c0x.github.io/workforce-cost-model/) · [simulator](https://d0m3n1c0x.github.io/workforce-cost-model/simulator/)
 - [hr-people-analytics](https://github.com/D0M3N1C0X/hr-people-analytics) — why people leave, whether pay is defensible, whether the HR service desk works · [report](https://d0m3n1c0x.github.io/hr-people-analytics/)
 - [engagement-survey-analytics](https://github.com/D0M3N1C0X/engagement-survey-analytics) — an engagement survey from 2,753 answers to an action plan · [dashboard](https://d0m3n1c0x.github.io/engagement-survey-analytics/)
 
@@ -47,7 +47,7 @@ Day job: HR advisory for the Italian market in Amazon's pan-European HR services
 
 **HR operations and tools**
 
-- [controlli-cedolini](https://github.com/D0M3N1C0X/controlli-cedolini) — fourteen pre-release checks on Italian payslips, terminations included · [tool](https://d0m3n1c0x.github.io/controlli-cedolini/strumento/) · [report](https://d0m3n1c0x.github.io/controlli-cedolini/)
+- [controlli-cedolini](https://github.com/D0M3N1C0X/controlli-cedolini) — nineteen pre-release checks on Italian payslips: INPS rates, absences, severance at leaving · [tool](https://d0m3n1c0x.github.io/controlli-cedolini/strumento/) · [report](https://d0m3n1c0x.github.io/controlli-cedolini/)
 - [excel-twin](https://github.com/D0M3N1C0X/excel-twin) — the small Python library that proves a spreadsheet's formulas reproduce a Python model
 - [job-search-agent](https://github.com/D0M3N1C0X/job-search-agent) — a job search run as a data pipeline, with explainable fit scoring
 
