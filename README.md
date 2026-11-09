@@ -1,4 +1,4 @@
-<a href="https://github.com/D0M3N1C0X/d0m3n1c0x.github.io"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/D0M3N1C0X/d0m3n1c0x.github.io/main/site-assets/cover-dark.png"><img alt="Domenico Perroni: HR advisory, people analytics, reward. 5,234 figures reconciled between Python and Excel, 12 projects to open live." src="https://raw.githubusercontent.com/D0M3N1C0X/d0m3n1c0x.github.io/main/site-assets/cover-light.png" width="100%"></picture></a>
+<a href="https://github.com/D0M3N1C0X/d0m3n1c0x.github.io"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/D0M3N1C0X/d0m3n1c0x.github.io/main/site-assets/cover-dark.png"><img alt="Domenico Perroni: HR advisory, people analytics, reward. 6,179 figures reconciled between Python and Excel, 12 projects to open live." src="https://raw.githubusercontent.com/D0M3N1C0X/d0m3n1c0x.github.io/main/site-assets/cover-light.png" width="100%"></picture></a>
 
 ## Domenico Perroni
 
@@ -16,8 +16,9 @@ Italian, based in Kraków. Open to conversations about HR advisory and reward ro
 - **The AI Act for an HR function**: twelve AI systems classified, one to stop now, seven high-risk with duties from
   2 December 2027, and whom to tell under labour law in nine countries.
   [Tool](https://d0m3n1c0x.github.io/ai-act-hr-readiness-kit/tool/) · [Report](https://d0m3n1c0x.github.io/ai-act-hr-readiness-kit/)
-- **Nineteen pre-release checks on Italian payslips** (CCNL Terziario): INPS rates, sick pay, severance at leaving;
-  44 of 44 planted errors found, no false alarms, in a browser tool where payroll files never leave the computer.
+- **Twenty-two pre-release checks on Italian payslips** under four collective agreements (retail, engineering,
+  hospitality, logistics): INPS rates, sick pay and the employer's top-up, income tax, severance at leaving; 67 of 67
+  planted errors found, no false alarms, in a browser tool where payroll files never leave the computer.
   [Tool](https://d0m3n1c0x.github.io/controlli-cedolini/strumento/) · [Report](https://d0m3n1c0x.github.io/controlli-cedolini/)
 
 Day job: HR advisory for the Italian market in Amazon's pan-European HR services, 150–180 employee cases a week with a
@@ -47,7 +48,7 @@ Day job: HR advisory for the Italian market in Amazon's pan-European HR services
 
 **HR operations and tools**
 
-- [controlli-cedolini](https://github.com/D0M3N1C0X/controlli-cedolini) — nineteen pre-release checks on Italian payslips: INPS rates, absences, severance at leaving · [tool](https://d0m3n1c0x.github.io/controlli-cedolini/strumento/) · [report](https://d0m3n1c0x.github.io/controlli-cedolini/)
+- [controlli-cedolini](https://github.com/D0M3N1C0X/controlli-cedolini) — twenty-two pre-release checks on Italian payslips under four collective agreements: INPS rates, absences and top-ups, income tax, severance at leaving · [tool](https://d0m3n1c0x.github.io/controlli-cedolini/strumento/) · [report](https://d0m3n1c0x.github.io/controlli-cedolini/)
 - [excel-twin](https://github.com/D0M3N1C0X/excel-twin) — the small Python library that proves a spreadsheet's formulas reproduce a Python model
 - [job-search-agent](https://github.com/D0M3N1C0X/job-search-agent) — a job search run as a data pipeline, with explainable fit scoring
 
